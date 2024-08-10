@@ -11,6 +11,8 @@ import DataProtectionPolicy from './Footer/DataProtection';
 import About from './Navbar/About';
 import Contact from './Navbar/Contact';
 import Services from './Navbar/Services';
+import TermsOfService from './Footer/TermsOfService';
+import PrivacyPolicy from './Footer/PrivacyPolicy';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,8 @@ const router = createBrowserRouter([
       { path: 'about', element: <About /> },
       { path: 'contact', element: <Contact /> },
       { path: 'services', element: <Services /> },
+      { path: 'terms', element: <TermsOfService /> },
+      { path: 'privacy', element: <PrivacyPolicy /> },
     ],
   },
 ]);
