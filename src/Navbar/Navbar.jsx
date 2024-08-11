@@ -102,24 +102,24 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-red-800 text-white py-4">
+        <nav className="gradient-background3 text-white py-4">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 {/* Logo and Title Section */}
                 <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
-                    <Link to="/" className="text-2xl font-bold flex flex-col items-center" onClick={playClickSound}>
+                    <Link to="/" className="horizontal-spin text-2xl font-bold flex flex-col items-center" onClick={playClickSound}>
                         <img
-                            src="/LogoNav.PNG"
+                            src="/NavLogo.png"
                             alt="Logo"
-                            className="w-12 h-12 mb-2"
+                            className="w-52 h-55 mb-2"
                         />
-                        <span>MyApp</span>
+                        {/* <span className='text-black zoom'>LAUGHTER</span> */}
                     </Link>
                 </div>
 
                 {/* Burger Menu Button */}
                 <div className="md:hidden flex items-center mb-2">
                     <button onClick={toggleMenu} className="text-white focus:outline-none">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="w-9 h-9 mb-4 shadow-teal zoom rounded-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
@@ -127,48 +127,84 @@ const Navbar = () => {
 
                 {/* Navigation Links Section */}
                 <div className={`flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 ${isMenuOpen ? 'block' : 'hidden'} md:flex`}>
-                    <NavLink
-                        to="/"
-                        onClick={handleLinkClick}
-                        className={({ isActive }) =>
-                            isActive ? "text-black" : "text-white hover:text-teal-300"
-                        }
-                    >
-                        Home
-                    </NavLink>
-                    <NavLink
-                        to="/about"
-                        onClick={handleLinkClick}
-                        className={({ isActive }) =>
-                            isActive ? "text-black" : "text-white hover:text-teal-300 shadow-sunset rounded-lg p-1"
-                        }
-                    >
-                        About
-                    </NavLink>
-                    <NavLink
-                        to="/services"
-                        onClick={handleLinkClick}
-                        className={({ isActive }) =>
-                            isActive ? "text-black" : "text-white hover:text-teal-300"
-                        }
-                    >
-                        Services
-                    </NavLink>
-                    <NavLink
-                        to="/contact"
-                        onClick={handleLinkClick}
-                        className={({ isActive }) =>
-                            isActive ? "text-black" : "text-white hover:text-teal-300"
-                        }
-                    >
-                        Contact
-                    </NavLink>
+                    {user ? (
+                        <>
+                            <NavLink
+                                to="/"
+                                onClick={handleLinkClick}
+                                className={({ isActive }) =>
+                                    isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
+                                }
+                            >
+                                Home
+                            </NavLink>
+                            <NavLink
+                                to="/about"
+                                onClick={handleLinkClick}
+                                className={({ isActive }) =>
+                                    isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
+                                }
+                            >
+                                About
+                            </NavLink>
+                            <NavLink
+                                to="/benefits"
+                                onClick={handleLinkClick}
+                                className={({ isActive }) =>
+                                    isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
+                                }
+                            >
+                                Benefits
+                            </NavLink>
+                            <NavLink
+                                to="laughter-wellness"
+                                onClick={handleLinkClick}
+                                className={({ isActive }) =>
+                                    isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
+                                }
+                            >
+                                Laughter Wellness
+                            </NavLink>
+                            <NavLink
+                                to="complimentary"
+                                onClick={handleLinkClick}
+                                className={({ isActive }) =>
+                                    isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
+                                }
+                            >
+                                Complimentary Therapy
+                            </NavLink>
+                            <NavLink
+                                to="/personal-bio"
+                                onClick={handleLinkClick}
+                                className={({ isActive }) =>
+                                    isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
+                                }
+                            >
+                                Personal Bio
+                            </NavLink>
+                            <NavLink
+                                to="/services"
+                                onClick={handleLinkClick}
+                                className={({ isActive }) =>
+                                    isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
+                                }
+                            >
+                                Services
+                            </NavLink>
+                            <NavLink
+                                to="/contact"
+                                onClick={handleLinkClick}
+                                className={({ isActive }) =>
+                                    isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
+                                }
+                            >
+                                Contact
+                            </NavLink>
 
-                    {user && (
-                        <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
                             {user.email === adminEmail && (
                                 <div className="relative">
-                                    <button onClick={toggleAdminDropdown} className="text-white bg-purple-500 rounded-md px-4 py-2 hover:bg-purple-700 focus:outline-none">
+                                    <button onClick={toggleAdminDropdown} className="text-primary-800 bg-black rounded-md px-4 py-2  focus:outline-none">
                                         Admin Actions
                                     </button>
                                     {isAdminDropdownOpen && (
@@ -188,22 +224,22 @@ const Navbar = () => {
                                     )}
                                 </div>
                             )}
-                            <span className="text-lg">
+
+                            <span className="text-lg text-primary-800 bg-black rounded-md p-1">
                                 Welcome, {userDetails ? `${capitalizeName(userDetails.firstName)} ${capitalizeName(userDetails.lastName)}` : 'User'}
                             </span>
 
-                            <button onClick={logout} className="text-white hover:text-teal-300">
+                            <button onClick={logout} className="text-gray-400 hover:text-teal-300">
                                 Logout
                             </button>
-                        </div>
-                    )}
-                    {!user && (
+                        </>
+                    ) : (
                         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
                             <NavLink
                                 to="/register"
                                 onClick={handleLinkClick}
                                 className={({ isActive }) =>
-                                    isActive ? "text-black" : "text-white hover:text-teal-300"
+                                    isActive ? "text-gray-900" : "text-gray-400 hover:text-teal-300"
                                 }
                             >
                                 Register
@@ -212,7 +248,7 @@ const Navbar = () => {
                                 to="/login"
                                 onClick={handleLinkClick}
                                 className={({ isActive }) =>
-                                    isActive ? "text-black" : "text-white hover:text-teal-300"
+                                    isActive ? "text-gray-900" : "text-gray-400 hover:text-teal-300"
                                 }
                             >
                                 Login
@@ -223,7 +259,6 @@ const Navbar = () => {
             </div>
         </nav>
     );
-
 };
 
 export default Navbar;

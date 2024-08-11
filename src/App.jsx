@@ -13,6 +13,10 @@ import Contact from './Navbar/Contact';
 import Services from './Navbar/Services';
 import TermsOfService from './Footer/TermsOfService';
 import PrivacyPolicy from './Footer/PrivacyPolicy';
+import PersonalBio from './Navbar/PersonalBio';
+import Benefits from './Navbar/Benefits';
+import LaughterWellness from './Navbar/LaughterWellness';
+import Complimentary from './Navbar/Complimentary';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +34,11 @@ const router = createBrowserRouter([
       { path: 'services', element: <Services /> },
       { path: 'terms', element: <TermsOfService /> },
       { path: 'privacy', element: <PrivacyPolicy /> },
+      { path: 'personal-bio', element: <PersonalBio /> },
+      { path: 'benefits', element: <Benefits /> },
+      { path: 'laughter-wellness', element: <LaughterWellness /> },
+      { path: 'complimentary', element: <Complimentary /> },
+
     ],
   },
 ]);

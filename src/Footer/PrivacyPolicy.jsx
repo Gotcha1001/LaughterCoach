@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
             </div>
 
             {/* Privacy Policy Content */}
-            <div className="bg-black text-yellow-500 rounded-lg shadow-lg p-6 mb-8">
+            <div className="bg-black text-white rounded-lg shadow-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold mb-4 text-center">Privacy Policy</h2>
                 <p className="text-lg mb-4">
                     At LaughNow 101, we are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and protect your personal information.
@@ -55,7 +55,7 @@ export default function PrivacyPolicy() {
                     5. **Changes to Policy**: We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.
                 </p>
                 <p className="text-lg">
-                    If you have any questions or concerns about our Privacy Policy, please contact us at [fakeemail@example.com](mailto:fakeemail@example.com).
+                    If you have any questions or concerns about our Privacy Policy, please contact us at <a href="mailto:fakeemail@example.com" className="text-yellow-300 hover:underline">hvisserclyt@gmail.com</a>
                 </p>
             </div>
         </section>

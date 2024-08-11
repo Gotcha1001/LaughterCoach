@@ -34,7 +34,7 @@ export default function TermsOfService() {
             </div>
 
             {/* Terms of Service Content */}
-            <div className="bg-black text-yellow-500 rounded-lg shadow-lg p-6 mb-8">
+            <div className="bg-black text-white rounded-lg shadow-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold mb-4 text-center">Terms and Conditions</h2>
                 <p className="text-lg mb-4">
                     Welcome to LaughNow 101! By participating in our laughter coaching services, you agree to the following terms and conditions. Please read them carefully.
@@ -52,7 +52,7 @@ export default function TermsOfService() {
                     4. **Liability**: LaughNow 101 is not liable for any injuries or damages resulting from participation in our services. By attending our sessions, you agree to hold us harmless from any claims or damages.
                 </p>
                 <p className="text-lg">
-                    For any questions or concerns about our terms, please contact us at [fakeemail@example.com](mailto:fakeemail@example.com).
+                    For any questions or concerns about our terms, please contact us at <a href="mailto:fakeemail@example.com" className="text-yellow-300 hover:underline">hvisserclyt@gmail.com</a>
                 </p>
             </div>
         </section>

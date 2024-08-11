@@ -7,8 +7,10 @@ const Footer = () => {
         clickSound.play();
     };
 
+    const currentYear = new Date().getFullYear();
+
     return (
-        <footer className="bg-gray-800 text-white py-6">
+        <footer className="gradient-background3 text-white py-6">
             <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between">
                 <ul className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
                     <li>
@@ -16,7 +18,7 @@ const Footer = () => {
                             to="/data-protection"
                             onClick={playClickSound}
                             className={({ isActive }) =>
-                                isActive ? "text-gray-900" : "text-gray-400 hover:text-teal-300"
+                                isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
                             }
                         >
                             Data Protection
@@ -27,7 +29,7 @@ const Footer = () => {
                             to="/terms"
                             onClick={playClickSound}
                             className={({ isActive }) =>
-                                isActive ? "text-gray-900" : "text-gray-400 hover:text-teal-300"
+                                isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
                             }
                         >
                             Terms of Service
@@ -38,7 +40,7 @@ const Footer = () => {
                             to="/privacy"
                             onClick={playClickSound}
                             className={({ isActive }) =>
-                                isActive ? "text-gray-900" : "text-gray-400 hover:text-teal-300"
+                                isActive ? "text-teal-400" : "text-gray-100 hover:text-teal-300"
                             }
                         >
                             Privacy Policy
@@ -48,15 +50,15 @@ const Footer = () => {
 
                 <div className="mt-6 sm:mt-0 flex items-center">
                     <img
-                        src="https://github.com/Gotcha1001/My-Images-for-sites-Wes/blob/main/JoshLogo.JPG?raw=true"
+                        src="/NavLogo.png"
                         alt="Art"
-                        className="h-12 w-12 rounded-full wobble1"
+                        className="h-20 w-22 horizontal-spin "
                     />
                 </div>
             </div>
 
             <div className="text-center mt-4">
-                <p className="text-sm text-gray-400">&copy; 2024 Your Company. All rights reserved.</p>
+                <p className="text-sm text-teal-400">&copy; {currentYear} CODENOW101. All rights reserved.</p>
             </div>
         </footer>
     );
